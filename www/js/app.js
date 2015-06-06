@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -48,6 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+<<<<<<< HEAD
   .state('signup', {
       url: '/signup',
       templateUrl: 'templates/signup.html',
@@ -55,6 +56,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         public: true
       }
     })
+=======
+  .state('app.kids', {
+    url: "/kids",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/kids.html",
+        controller: 'KidsCtrl'
+      }
+    }
+  })
+>>>>>>> 7c747e84c324fcdfc477d122e9643e43b28fa6bd
 
     .state('app.playlists', {
       url: "/playlists",
@@ -77,4 +89,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
-});
+})
+.constant('firebaseUrl', 'https://27percenters.firebaseio.com');

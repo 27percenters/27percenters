@@ -2,6 +2,7 @@
 login/signup page  -->
 <ion-view view-title="Control Panel (formerly Playlist)">
   <ion-content>
+<<<<<<< HEAD
 
     <form ng-submit="doLogin()">
       <div class="list">
@@ -21,6 +22,13 @@ login/signup page  -->
         </label>
       </div>
     </form>
+=======
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.$value}}
+      </ion-item>
+    </ion-list>
+>>>>>>> 7c747e84c324fcdfc477d122e9643e43b28fa6bd
   </ion-content>
 </ion-view>
 <!--     <button class="button">
