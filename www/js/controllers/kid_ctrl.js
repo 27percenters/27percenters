@@ -4,6 +4,5 @@ angular.module('starter.controllers')
   var kid = $firebaseObject(ref.child('kids').child($stateParams.kidId));
   $scope.kid = kid;
 
-  var intId = parseInt($stateParams.kidId);
-  $scope.needs = $firebaseArray(ref.child('needs').orderByChild('kid').equalTo(intId));
+  $scope.needs = $firebaseArray(ref.child('needs').orderByChild('kid').equalTo($stateParams.kidId));
 });
