@@ -1,7 +1,7 @@
 <ion-view view-title="Kids">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="kid in kids" href="#/app/kids/{{kid.id}}">
+      <ion-item ng-repeat="(id, kid) in kids" href="#/app/kids/{{id}}">
         <h2>{{kid.first_name}} {{kid.last_name}}</h2>
         <p>{{kid.bio}}</p>
       </ion-item>
