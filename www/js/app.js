@@ -47,6 +47,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
+  .state('signup', {
+      url: '/signup',
+      templateUrl: 'templates/signup.html',
+      data: {
+        public: true
+      }
+    })
+
     .state('app.playlists', {
       url: "/playlists",
       views: {

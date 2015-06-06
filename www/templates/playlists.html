@@ -1,13 +1,8 @@
+<!-- This playlists page is the default page, trying to change it to a default
+login/signup page  -->
 <ion-view view-title="Control Panel (formerly Playlist)">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
 
-    <button class="button button-positive" href = "http://localhost:8100/#/app/browser">
-      donate now
-    </button>
     <form ng-submit="doLogin()">
       <div class="list">
         <label class="item item-input">
@@ -21,9 +16,14 @@
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>
         </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Sign Up</button>
+        </label>
       </div>
     </form>
-    <button class="button">
+  </ion-content>
+</ion-view>
+<!--     <button class="button">
         <i class="icon ion-loading-c"></i> Loading...
       </button>
       <button class="button icon-left ion-home">Home</button>
@@ -32,7 +32,13 @@
       <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
       <button class="button icon ion-gear-a"></button>
       <a class="button button-icon icon ion-settings"></a>
-      <a class="button button-outline icon-right ion-navicon button-balanced">Reorder</a>
-    </ion-list>
-  </ion-content>
-</ion-view>
+      <a class="button button-outline icon-right ion-navicon button-balanced">Reorder</a> -->
+      <!--       <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item> -->
+
+<!--     <button class="button button-positive" href = "http://localhost:8100/#/app/browser">
+      donate now
+    </button> -->
+
+
