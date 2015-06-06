@@ -2,5 +2,15 @@
   <ion-content>
     <h1>{{kid.first_name}} {{kid.last_name}}</h1>
     <p>{{kid.bio}}</p>
+
+    <h1>Needs:</h1>
+    <ion-list>
+      <ion-item ng-repeat="need in needs">
+        <h2>{{need.name}}</h2>
+        <button class="button button-full button-positive">
+          Contribute
+        </button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
