@@ -15,12 +15,26 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$positive:                        #e75735;
-
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 $font-family-sans-serif: "Lato", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
 
+$positive: #e75735;
+
+$font-size-base: 16px;
+$font-size-large: 20px;
+$font-size-small: 14px;
+$button-font-size: 18px;
+$bar-title-font-size: 20px;
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+.text-center {
+  text-align: center;
+}
+
+.login-img {
+  width: 100%;
+}

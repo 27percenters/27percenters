@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-.controller('LoginCtrl', function($scope, firebaseUrl, $firebaseObject) {
+.controller('LoginCtrl', function($scope, firebaseUrl, $firebaseObject, $state, $ionicPopup) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -11,17 +11,6 @@ angular.module('starter.controllers')
   // Form data for the login modal
   $scope.loginData = {};
 
-  var ref = new Firebase(firebaseUrl);
-  $scope.loginText = setLoginText(ref.getAuth());
-  ref.onAuth(setLoginText);
-  function setLoginText(authData) {
-    if (authData) {
-      $scope.loggedInUser = $firebaseObject(ref.child('users').child(authData.uid));
-    } else {
-      $scope.loggedInUser = null;
-    }
-  }
-
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     var ref = new Firebase(firebaseUrl);
@@ -30,18 +19,18 @@ angular.module('starter.controllers')
       password: $scope.loginData.password
     }, function(error, authData) {
       if (error) {
-        console.log("Login Failed!", error);
+        var alertPopup = $ionicPopup.alert({
+          title: 'Invalid Login',
+          template: 'Please try your email and password again'
+        });
       } else {
-        console.log("Authenticated successfully with payload:", authData);
+        var alertPopup = $ionicPopup.alert({
+          title: 'You have successfully logged in!',
+        });
+        alertPopup.then(function(res) {
+          $state.go('app.kids');
+        });
       }
     });
-
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
   };
 });
