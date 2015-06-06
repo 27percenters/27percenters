@@ -1,5 +1,4 @@
-angular.module('starter.controllers', [])
-
+angular.module('starter.controllers')
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, firebaseUrl) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -62,13 +61,4 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
-})
-
-.controller('PlaylistsCtrl', function($scope, $firebaseArray, firebaseUrl) {
-  var ref = new Firebase(firebaseUrl + '/people');
-  $scope.playlists = $firebaseArray(ref);
-  console.log($scope.playlists);
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
