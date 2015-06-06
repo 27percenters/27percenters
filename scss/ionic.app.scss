@@ -20,6 +20,7 @@ $positive:                        #387ef5 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+$font-family-sans-serif: "Lato", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
