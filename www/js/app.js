@@ -68,6 +68,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('app.donations_success', {
+    url: "/donations_success/:needId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/donations_success.html",
+        controller: 'DonationsSuccessCtrl'
+      }
+    }
+  })
+
     .state('app.playlists', {
       url: "/playlists",
       views: {
