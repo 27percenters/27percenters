@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
   .factory("Auth", ["$firebaseAuth", "$rootScope",
-  function ($firebaseAuth, $rootScope) {
-    var ref = new Firebase('https://27percenters.firebaseio.com');
+  function ($firebaseAuth, $rootScope, firebaseUrl) {
+    var ref = new Firebase(firebaseUrl);
     return $firebaseAuth(ref);
   }]);
