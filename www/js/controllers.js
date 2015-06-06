@@ -12,6 +12,17 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
 
+  var ref = new Firebase(firebaseUrl);
+  $scope.loginText = setLoginText(ref.getAuth());
+  ref.onAuth(setLoginText);
+  function setLoginText(authData) {
+    if (authData) {
+      $scope.loginText = 'User ' + authData.uid + ' is logged in with ' + authData.provider;
+    } else {
+      $scope.loginText = 'User is logged out';
+    }
+  }
+
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
