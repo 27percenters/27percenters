@@ -29,7 +29,6 @@ angular.module('starter.controllers')
         });
         alertPopup.then(function(res) {
           $state.go('app.kids');
-        });
       }
     });
   };

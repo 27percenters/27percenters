@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 .controller('KidCtrl', function($scope, $stateParams, firebaseUrl, $firebaseObject,
-                                $firebaseArray, $state, $ionicPopup) {
+                                $firebaseArray, $state, $ionicPopup, $ionicHistory) {
   var ref = new Firebase(firebaseUrl);
   var kid = $firebaseObject(ref.child('kids').child($stateParams.kidId));
   $scope.kid = kid;
@@ -14,6 +14,7 @@ angular.module('starter.controllers')
     });
     confirmPopup.then(function(res) {
       if (res) {
+        $ionicHistory.nextViewOptions({ disableBack: true });
         $state.go('app.donations_success', { needId: needId });
       }
     });
