@@ -5,11 +5,11 @@
 
     <h1>Needs:</h1>
     <ion-list>
-      <ion-item ng-repeat="(id, need) in needs">
+      <ion-item ng-repeat="(needId, need) in needs">
         <h2>{{need.description}}</h2>
-        <a class="button button-full button-positive" href="#/app/donations_success/{{id}}">
+        <button class="button button-full button-positive" ng-click="contribute(needId)">
           Contribute
-        </a>
+        </button>
       </ion-item>
     </ion-list>
   </ion-content>
