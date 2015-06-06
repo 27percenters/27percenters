@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, firebaseUrl) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, firebaseUrl, $firebaseObject) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -16,9 +16,9 @@ angular.module('starter.controllers')
   ref.onAuth(setLoginText);
   function setLoginText(authData) {
     if (authData) {
-      $scope.loginText = 'User ' + authData.uid + ' is logged in with ' + authData.provider;
+      $scope.loggedInUser = $firebaseObject(ref.child('users').child(authData.uid));
     } else {
-      $scope.loginText = 'User is logged out';
+      $scope.loggedInUser = null;
     }
   }
 

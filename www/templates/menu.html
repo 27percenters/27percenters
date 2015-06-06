@@ -19,7 +19,7 @@
     <ion-content>
       <ion-list>
         <ion-item>
-          {{loginText}}
+          {{loggedInUser ? 'Logged in as ' + loggedInUser.first_name : 'Not logged in'}}
         </ion-item>
         <ion-item menu-close ng-click="login()">
           Login
