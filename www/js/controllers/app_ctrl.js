@@ -15,6 +15,7 @@ angular.module('starter.controllers')
   $scope.loginText = setLoginText(ref.getAuth());
   ref.onAuth(setLoginText);
   function setLoginText(authData) {
+    console.log(authData);
     if (authData) {
       $scope.loggedInUser = $firebaseObject(ref.child('users').child(authData.uid));
     } else {
