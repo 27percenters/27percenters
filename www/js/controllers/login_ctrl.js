@@ -33,4 +33,43 @@ angular.module('starter.controllers')
       }
     });
   };
+
+  $scope.fbLogin = function() {
+    var ref = new Firebase(firebaseUrl);
+    ref.authWithOAuthPopup("facebook", function(error, authData) {
+      if (error) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Login Failed',
+          template: 'Login with Facebook failed.'
+        });
+      } else {
+        var alertPopup = $ionicPopup.alert({
+          title: 'You have successfully logged in!',
+        });
+        alertPopup.then(function(res) {
+          $state.go('app.kids');
+        })
+      }
+    });
+  };
+
+  $scope.googleLogin = function() {
+    var ref = new Firebase(firebaseUrl);
+    ref.authWithOAuthPopup("google", function(error, authData) {
+      if (error) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Login Failed',
+          template: 'Login with Google failed.'
+        });
+      } else {
+        var alertPopup = $ionicPopup.alert({
+          title: 'You have successfully logged in!',
+        });
+        alertPopup.then(function(res) {
+          $state.go('app.kids');
+        })
+      }
+    });
+  }
+
 });
