@@ -19,6 +19,8 @@
         <ion-item class="item-avatar">
           <img src="/img/27logo_med.png" />
           {{loggedInUser ? 'Logged in as ' + loggedInUser.first_name : 'Not logged in'}}
+          <span ng-if='loggedInUser.first_name'>{{loggedInUser ? 'Logged in as ' + loggedInUser.first_name : 'Not logged in'}}</span>
+          <span ng-if='!loggedInUser.first_name'>{{loggedInUser ? 'Logged in' : 'Not logged in'}}</span>
         </ion-item>
         <ion-item menu-close href="#/app/kids">
           Browse Kids
