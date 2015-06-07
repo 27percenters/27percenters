@@ -1,14 +1,24 @@
 <ion-view view-title="Kid">
   <ion-content padding="true">
     <h1>
-      Thank for you donating to {{kid.first_name}} {{kid.last_name}}!
+      Thank you for donating to {{kid.first_name}}!
     </h1>
+
+    <div class="card">
+      <div class="item item-thumbnail-left">
+        <img ng-src="{{kid.picture}}" />
+        <h2>{{kid.first_name}} {{kid.last_name}}</h2>
+        <p>{{need.description}}</p>
+        <p><i class="icon ion-ios-location"></i>&nbsp;&nbsp;Mission District, San Francisco, USA</p>
+      </div>
+    </div>
+
     <p>
       You will hear back when the money is put into use.
     </p>
 
     <a class="button button-full button-positive" href="#/app/kids">
-      Back to kids
+      Back to browse
     </a>
   </ion-content>
 </ion-view>
