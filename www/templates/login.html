@@ -8,8 +8,8 @@
     <img src="/img/27logo.png" />
   </div>
   -->
-  <form ng-submit="doLogin()">
-    <div class="list list-inset">
+  <div class="list list-inset login-form">
+    <form ng-submit="doLogin()">
       <label class="item item-input">
         <span class="input-label">Email</span>
         <input type="text" ng-model="loginData.username">
@@ -19,18 +19,25 @@
         <input type="password" ng-model="loginData.password">
       </label>
       <button class="button button-block button-positive" type="submit">Log in</button>
-      <p class="text-center">or</p>
-      <a class="button button-block button-positive" href="/#/signup">Sign up for an Account</a>
-    </div>
-  </form>
-  <form ng-submit="fbLogin()">
-    <div class="list list-inset">
-      <button class="button button-block button-negative" type="submit">Log in with Facebook</button>
-    </div>
-  </form>
-  <form ng-submit="googleLogin()">
-    <div class="list list-inset">
-      <button class="button button-block button-negative" type="submit">Log in with Google</button>
-    </div>
-  </form>
+    </form>
+  </div>
+  <p class="text-center">or</p>
+  <div class="row login-social-form">
+    <form ng-submit="fbLogin()" class="col">
+      <button class="button button-block button-fb icon-left ion-social-facebook" type="submit">
+        Facebook Login
+      </button>
+    </form>
+    <form ng-submit="googleLogin()" class="col">
+      <button class="button button-block button-google icon-left ion-social-google" type="submit">
+        Google Login
+      </button>
+    </form>
+  </div>
+  <p class="text-center">or</p>
+  <div class="login-button">
+    <a class="button button-block button-positive login-button" href="/#/signup">
+      Sign up for an Account
+    </a>
+  </div>
 </ion-content>

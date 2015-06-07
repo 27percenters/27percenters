@@ -46,3 +46,37 @@ $bar-title-font-size: 20px;
     width: auto;
     height: auto;
 }
+
+.button-fb {
+  background: #3b5998;
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.button-google {
+  background: black;
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.login-form {
+  margin-bottom: 0;
+}
+
+.login-social-form {
+  margin: -20px 0 -10px;
+
+  button {
+    margin: 0;
+  }
+}
+
+.login-button {
+  padding: 0 10px;
+}
