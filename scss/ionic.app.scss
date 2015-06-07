@@ -82,7 +82,8 @@ $bar-title-font-size: 20px;
   padding: 0 10px;
 }
 
-h2.details-description {
+h2.details-description,
+p.details-description {
   text-overflow: clip;
   white-space: normal;
 }
