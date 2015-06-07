@@ -1,8 +1,11 @@
 <ion-view view-title="Details">
   <ion-content>
-    <img src={{kid.picture}} class="thekid-img">
+    <div class="kid-intro">
+      <img src={{kid.picture}} class="thekid-img">
+      <h2>{{kid.first_name}} {{kid.last_name}}</h2>
+    </div>
+
     <div class="kid-with-padding">
-      <h1>{{kid.first_name}} {{kid.last_name}}</h1>
       <p>{{kid.bio}}</p>
       <h3>How you can help me:</h3>
     </div>

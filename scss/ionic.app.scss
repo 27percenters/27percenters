@@ -41,11 +41,10 @@ $bar-title-font-size: 20px;
 }
 
 .thekid-img {
-    display: block;
-    max-width:690px;
-    max-height:300px;
-    width: auto;
-    height: auto;
+  display: block;
+  max-width:690px;
+  max-height:300px;
+  width: 100%;
 }
 
 .button-fb {
@@ -109,4 +108,19 @@ h3, .h3 {
   padding: 20px;
   line-height: 1.5;
   margin: 0;
+}
+
+.kid-intro {
+  position: relative;
+  margin-bottom: 10px;
+
+  h2 {
+    position: absolute;
+    bottom: 0;
+    background: rgba($positive, .8);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    color: white;
+  }
 }

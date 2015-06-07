@@ -16,7 +16,8 @@
   <ion-side-menu side="right">
     <ion-content>
       <ion-list>
-        <ion-item>
+        <ion-item class="item-avatar">
+          <img src="/img/27logo_med.png" />
           {{loggedInUser ? 'Logged in as ' + loggedInUser.first_name : 'Not logged in'}}
         </ion-item>
         <ion-item menu-close href="#/app/kids">
