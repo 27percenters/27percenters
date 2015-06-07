@@ -19,6 +19,9 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 $font-family-sans-serif: "Lato", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+$font-family-serif: 'Lustria', serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
 
 $positive: #e75735;
 
@@ -98,6 +101,15 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 24px;
+}
+
+.item h1 {
+  font-size: 18px;
+  margin: 0 0 2px 0;
+}
+
+.item h2 {
+  font-family: $font-family-sans-serif;
 }
 
 .header-icon {

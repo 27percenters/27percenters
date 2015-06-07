@@ -1,4 +1,4 @@
-<ion-view view-title="Kid">
+<ion-view view-title="Thank you!">
   <ion-content padding="true">
     <h1>
       Thank you for donating to {{kid.first_name}}!
@@ -7,18 +7,20 @@
     <div class="card">
       <div class="item item-thumbnail-left">
         <img ng-src="{{kid.picture}}" />
-        <h2>{{kid.first_name}} {{kid.last_name}}</h2>
-        <p class="details-description">{{need.description}}</p>
+        <h1>{{kid.first_name}} {{kid.last_name}}</h1>
+        <h2 class="details-description">{{need.description}}</h2>
         <p><i class="icon ion-ios-location"></i>&nbsp;&nbsp;Mission District, San Francisco, USA</p>
       </div>
     </div>
 
     <p>
-      You will hear back when the money is put into use.
+      Your {{need.amount}} donation has been charged to your credit card ending
+      ith 4832.  You will hear back from {{kid.first_name}} when the money is
+      put into use!
     </p>
 
     <a class="button button-full button-positive" href="#/app/kids">
-      Back to browse
+      Back to Browse
     </a>
   </ion-content>
 </ion-view>
