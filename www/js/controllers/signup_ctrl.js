@@ -48,8 +48,14 @@ angular.module('starter.controllers')
       var alertPopup = $ionicPopup.alert({
         title: 'You have successfully signed up for an account!',
       });
+
       alertPopup.then(function(res) {
-        $state.go('app.kids');
+        if (user.type === 'caregiver') {
+          $state.go('app.caregiver');
+        } else {
+          $state.go('app.kids');
+        }
+        $scope.signupData = { type: 'caregiver' };
       });
 
       return authObj.$authWithPassword({
