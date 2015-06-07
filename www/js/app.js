@@ -71,7 +71,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: "/caregiver",
     views: {
       'menuContent': {
-        templateUrl: "templates/caregiver.html"
+        templateUrl: "templates/caregiver.html",
+        controller: 'CaregiverCtrl'
       }
     }
   })
