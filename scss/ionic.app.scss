@@ -81,3 +81,8 @@ $bar-title-font-size: 20px;
 .kid-with-padding {
   padding: 0 10px;
 }
+
+h2.details-description {
+  text-overflow: clip;
+  white-space: normal;
+}
