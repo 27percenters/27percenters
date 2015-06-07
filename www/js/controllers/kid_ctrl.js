@@ -8,6 +8,7 @@ angular.module('starter.controllers')
   $scope.needs = $firebaseArray(ref.child('needs').orderByChild('kid').equalTo($stateParams.kidId));
 
   $scope.contribute = function (needId) {
+    console.log(needId);
     var confirmPopup = $ionicPopup.confirm({
       title: 'Contribute',
       template: 'Your credit card ending with 4832 will be charged.  Continue?'
