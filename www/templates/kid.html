@@ -2,11 +2,12 @@
   <ion-content padding="true">
     <h1>{{kid.first_name}} {{kid.last_name}}</h1>
     <p>{{kid.bio}}</p>
-
+    <img src={{kid.picture}} class="thekid-img">
     <h1>Needs:</h1>
     <ion-list>
       <ion-item ng-repeat="(needId, need) in needs">
         <h2>{{need.description}}</h2>
+        <p ng-if="need.picture"><img src={{need.picture}}></p>
         <button class="button button-full button-positive" ng-click="contribute(needId)">
           <i class="icon ion-checkmark-round"></i>
           Contribute
