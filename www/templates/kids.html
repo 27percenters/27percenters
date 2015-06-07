@@ -1,13 +1,10 @@
 <ion-view view-title="Kids">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="(id, kid) in kids" href="#/app/kids/{{id}}">
-
-        <a class="item item-thumbnail-left" href="#">
-          <img src={{kid.picture}}>
-          <h2>{{kid.first_name}} {{kid.last_name}}</h2>
-          <p>{{kid.bio}}</p>
-        </a>
+      <ion-item ng-repeat="(id, kid) in kids" href="#/app/kids/{{id}}" class="item-thumbnail-left">
+        <img src={{kid.picture}}>
+        <h2>{{kid.first_name}} {{kid.last_name}}</h2>
+        <p>{{kid.bio}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
