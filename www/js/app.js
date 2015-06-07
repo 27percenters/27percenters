@@ -25,6 +25,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('signup', {
+    url: "/signup",
+    templateUrl: "templates/signup.html",
+    controller: 'SignupCtrl'
+  })
+
   .state('login', {
     url: "/login",
     templateUrl: "templates/login.html",

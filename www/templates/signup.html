@@ -1,0 +1,30 @@
+<ion-header-bar class="bar-positive">
+  <h1 class="title">Sign up for an Account</h1>
+</ion-header-bar>
+<ion-content>
+  <img class="login-img" src="/img/background.jpg" />
+  <!--
+  <div class="text-center">
+    <img src="/img/27logo.png" />
+  </div>
+  -->
+  <form ng-submit="doSignup()">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <span class="input-label">Full Name</span>
+        <input type="text" ng-model="signupData.full_name">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="signupData.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="signupData.password">
+      </label>
+      <button class="button button-block button-positive" type="submit">
+        Sign up to spread love!
+      </button>
+    </div>
+  </form>
+</ion-content>
