@@ -1,7 +1,7 @@
 <ion-view view-title="Account Settings">
   <ion-content>
     <div class="acct-settings" class="user-img">
-        <img src="http://worldwide.streamer.espeakers.com/assets/5/16375/97662.jpg" class="thekid-img">
+        <img src="{{loggedInUser.picture}}" class="thekid-img">
         <h2>{{loggedInUser.first_name}} {{loggedInUser.last_name}}</h2>
     </div>
 
@@ -11,15 +11,15 @@
         </div>
         <div class="item item-text-wrap">
             Name
-            <span class="item-note">Linda Wolfson</span>
+            <span class="item-note">{{loggedInUser.first_name}} {{loggedInUser.last_name}}</span>
         </div>
         <div class="item item-text-wrap">
             Email
-            <span class="item-note">linda@gmail.com</span>
+            <span class="item-note">{{loggedInUser.email}}</span>
         </div>
         <div class="item item-text-wrap">
             Location
-            <span class="item-note">San Francisco, CA</span>
+            <span class="item-note">{{loggedInUser.location}}</span>
         </div>
         <div class="item item-icon-left item-icon-right assertive" href="#">
             <i class="icon ion-email"></i>
