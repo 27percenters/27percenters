@@ -44,6 +44,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     controller: 'AppCtrl'
   })
 
+  .state('app.caregiver', {
+    url: "/caregiver",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/caregiver.html"
+      }
+    }
+  })
+
   .state('app.search', {
     url: "/search",
     views: {
