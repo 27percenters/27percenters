@@ -7,9 +7,9 @@
 
     <div class="kid-with-padding">
       <p>{{kid.bio}}</p>
-      <h3>How you can help me:</h3>
     </div>
     <ion-list>
+      <div class="item item-divider"><h1>How you can help me:</h1></div>
       <ion-item ng-repeat="(needId, need) in needs" class="item-thumbnail-left">
         <img ng-if="need.picture" src={{need.picture}}>
         <h2 class="details-description">{{need.description}}</h2>
