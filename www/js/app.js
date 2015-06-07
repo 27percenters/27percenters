@@ -31,6 +31,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     controller: 'SignupCtrl'
   })
 
+  .state('home', {
+    url: "/home",
+    templateUrl: "templates/home.html"
+  })
+
   .state('login', {
     url: "/login",
     templateUrl: "templates/login.html",
@@ -127,7 +132,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     if (ref.getAuth()) {
       return '/app/kids';
     } else {
-      return '/login';
+      return '/home';
     }
   })
 });
