@@ -18,9 +18,6 @@
         <ion-item>
           {{loggedInUser ? 'Logged in as ' + loggedInUser.first_name : 'Not logged in'}}
         </ion-item>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
         <ion-item menu-close href="#/app/kids">
           Kids
         </ion-item>
@@ -32,6 +29,9 @@
         </ion-item>
         <ion-item menu-close href="#/app/playlists">
           Settings
+        </ion-item>
+        <ion-item menu-close ng-click="logout()">
+          Log out
         </ion-item>
       </ion-list>
     </ion-content>
