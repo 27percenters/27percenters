@@ -10,6 +10,12 @@
   -->
   <form ng-submit="doSignup()">
     <div class="list list-inset">
+      <div class="item item-divider">I am a:</div>
+      <ion-radio ng-model="signupData.type" ng-value="'donor'">Donor</ion-radio>
+      <ion-radio ng-model="signupData.type" ng-value="'caregiver'">Caregiver</ion-radio>
+    </div>
+    <div class="list list-inset">
+      <div class="item item-divider">Account Information</div>
       <label class="item item-input">
         <span class="input-label">Full Name</span>
         <input type="text" ng-model="signupData.full_name">
