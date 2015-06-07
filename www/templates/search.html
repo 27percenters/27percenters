@@ -1,11 +1,10 @@
 <ion-view view-title="Search">
   <ion-content>
-    <h1>Search</h1>
     <form ng-submit="doSearch()">
-        <label class="item item-input">
-            <span class="input-label">Name:</span>
-            <input type="text" ng-model="searchData.term">
-        </label>
+      <label class="search-input item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchData.term">
+      </label>
     </form>
     <ion-list>
       <ion-item ng-repeat="(id, kid) in filteredKids" href="#/app/kids/{{id}}" class="item-thumbnail-left">
