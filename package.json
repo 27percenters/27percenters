@@ -25,6 +25,6 @@
     "android"
   ],
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install && gulp sass"
   }
 }
