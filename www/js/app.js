@@ -25,21 +25,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('signup', {
+  .state('landing', {
+    url: "/landing",
+    abstract: true,
+    templateUrl: "templates/landing.html"
+  })
+
+  .state('landing.signup', {
     url: "/signup",
-    templateUrl: "templates/signup.html",
-    controller: 'SignupCtrl'
+    views: {
+      'menuContent': {
+        templateUrl: "templates/signup.html",
+        controller: 'SignupCtrl'
+      }
+    }
   })
 
-  .state('home', {
+  .state('landing.home', {
     url: "/home",
-    templateUrl: "templates/home.html"
+    views: {
+      'menuContent': {
+        templateUrl: "templates/home.html"
+      }
+    }
   })
 
-  .state('login', {
+  .state('landing.login', {
     url: "/login",
-    templateUrl: "templates/login.html",
-    controller: 'LoginCtrl'
+    views: {
+      'menuContent': {
+        templateUrl: "templates/login.html",
+        controller: 'LoginCtrl'
+      }
+    }
   })
 
   .state('app', {
@@ -132,7 +150,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     if (ref.getAuth()) {
       return '/app/kids';
     } else {
-      return '/home';
+      return '/landing/home';
     }
+      return '/app/kids';
   })
 });

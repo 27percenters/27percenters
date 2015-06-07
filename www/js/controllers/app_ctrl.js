@@ -29,7 +29,7 @@ angular.module('starter.controllers')
       title: 'You have successfully logged out!',
     });
     alertPopup.then(function(res) {
-      $state.go('login');
+      $state.go('landing/home');
     });
   }
 });

@@ -37,6 +37,7 @@ $bar-title-font-size: 20px;
 
 .login-img {
   width: 100%;
+  max-width: 1000px;
 }
 
 .thekid-img {
@@ -102,4 +103,10 @@ h3, .h3 {
 
 .header-icon {
   height: 35px;
+}
+
+.home-description {
+  padding: 20px;
+  line-height: 1.5;
+  margin: 0;
 }
