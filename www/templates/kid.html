@@ -8,10 +8,10 @@
       <ion-list>
         <ion-item ng-repeat="(needId, need) in needs">
           <h2>{{need.description}}</h2>
-          <p ng-if="need.picture"><img src={{need.picture}}></p>
           <button class="button button-full button-positive icon-left ion-checkmark-round" ng-click="contribute(needId)">
             Contribute
           </button>
+          <p ng-if="need.picture"><img src={{need.picture}}></p>
         </ion-item>
       </ion-list>
     </div>
