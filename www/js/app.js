@@ -154,6 +154,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     } else {
       return '/landing/home';
     }
-      return '/app/kids';
   })
 });
